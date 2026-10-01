@@ -21,13 +21,13 @@
         body { background-color: var(--light); color: var(--dark); line-height: 1.6; }
 
         header { background: var(--white); box-shadow: 0 2px 10px rgba(0,0,0,0.08); position: sticky; top: 0; z-index: 1000; }
-        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 1rem 1.5rem; flex-wrap: wrap; gap: 1rem; }
+        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 1rem 1.5rem; flex-wrap: wrap; gap: 0.8rem; }
         .logo { font-size: 1.4rem; font-weight: 700; color: var(--primary); }
         .brand-tag { font-size: 0.85rem; color: var(--accent); font-weight: 600; }
-        .nav-links { display: flex; align-items: center; gap: 0.8rem; flex-wrap: wrap; }
-        .nav-links a { text-decoration: none; color: var(--dark); font-weight: 500; font-size: 0.9rem; }
-        .btn-call { background-color: var(--primary); color: var(--white) !important; padding: 0.4rem 0.9rem; border-radius: 20px; font-weight: 600; font-size: 0.85rem; text-decoration: none; }
-        .btn-wa-head { background-color: var(--whatsapp); color: var(--white) !important; padding: 0.4rem 0.9rem; border-radius: 20px; font-weight: 600; font-size: 0.85rem; text-decoration: none; display: inline-flex; align-items: center; gap: 0.3rem; }
+        .nav-links { display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; }
+        .nav-links a { text-decoration: none; color: var(--dark); font-weight: 500; font-size: 0.85rem; }
+        .btn-call { background-color: var(--primary); color: var(--white) !important; padding: 0.35rem 0.75rem; border-radius: 20px; font-weight: 600; font-size: 0.8rem; text-decoration: none; }
+        .btn-wa-head { background-color: var(--whatsapp); color: var(--white) !important; padding: 0.35rem 0.75rem; border-radius: 20px; font-weight: 600; font-size: 0.8rem; text-decoration: none; display: inline-flex; align-items: center; gap: 0.3rem; }
 
         .hero { background: linear-gradient(135deg, rgba(14,77,146,0.92), rgba(0,168,150,0.85)), url('https://images.unsplash.com/photo-1548839140-29a749e1bc4e?w=1200') center/cover; color: var(--white); text-align: center; padding: 4.5rem 1.5rem; }
         .hero h1 { font-size: 2.5rem; margin-bottom: 0.8rem; }
@@ -90,8 +90,8 @@
 </head>
 <body>
 
-    <!-- Floating WhatsApp Direct Chat Button -->
-    <a href="https://wa.me/919720868856?text=Hello%20Shreeji%20Aqua,%20I%20want%20to%20order%20TruAqua%20water" target="_blank" class="floating-wa-btn">
+    <!-- Floating WhatsApp Direct Chat Button (Connects to 9034156087) -->
+    <a href="https://wa.me/919034156087?text=Hello%20Shreeji%20Aqua,%20I%20want%20to%20order%20TruAqua%20water" target="_blank" class="floating-wa-btn">
         💬 Order on WhatsApp
     </a>
 
@@ -105,7 +105,8 @@
             <nav class="nav-links">
                 <a href="#services">Services</a>
                 <a href="#products">Rates</a>
-                <a href="https://wa.me/919720868856?text=Hello%20Shreeji%20Aqua,%20I%20want%20to%20order%20TruAqua%20water" target="_blank" class="btn-wa-head">💬 WhatsApp Order</a>
+                <a href="https://wa.me/919034156087?text=Hello%20Shreeji%20Aqua,%20I%20want%20to%20order%20TruAqua%20water" target="_blank" class="btn-wa-head">💬 WhatsApp Order</a>
+                <a href="tel:9034156087" class="btn-call">📞 9034156087</a>
                 <a href="tel:9720868856" class="btn-call">📞 9720868856</a>
                 <a href="tel:9389745424" class="btn-call">📞 9389745424</a>
             </nav>
@@ -196,8 +197,9 @@
     <footer id="contact">
         <h2>Shreeji Aqua Enterprises</h2>
         <p style="margin-top: 5px;">Brand: <b>TruAqua 💧</b> | Location: Main Road, Sarsawa, UP</p>
-        <p style="margin-top: 10px; font-size: 1.05rem;">
+        <p style="margin-top: 10px; font-size: 1rem;">
             📞 Call / WhatsApp: 
+            <a href="https://wa.me/919034156087?text=Hello%20Shreeji%20Aqua,%20I%20want%20to%20order%20TruAqua%20water" target="_blank" class="phone-link">9034156087</a> &nbsp;|&nbsp; 
             <a href="https://wa.me/919720868856?text=Hello%20Shreeji%20Aqua,%20I%20want%20to%20order%20TruAqua%20water" target="_blank" class="phone-link">9720868856</a> &nbsp;|&nbsp; 
             <a href="https://wa.me/919389745424?text=Hello%20Shreeji%20Aqua,%20I%20want%20to%20order%20TruAqua%20water" target="_blank" class="phone-link">9389745424</a>
         </p>
@@ -225,7 +227,7 @@
             <span class="close-modal" onclick="closeModals()">&times;</span>
             <h3 style="color: #0E4D92; margin-bottom: 0.8rem;">⚙ Admin Control Panel</h3>
             
-            <!-- TABS AT TOP FOR 100% VISIBILITY -->
+            <!-- TABS AT TOP -->
             <div class="admin-tab-bar">
                 <button type="button" class="admin-tab-btn active" id="tab-btn-prices" onclick="switchAdminTab('prices')">🏷️ Edit Live Rates</button>
                 <button type="button" class="admin-tab-btn" id="tab-btn-passcode" onclick="switchAdminTab('passcode')">🔑 Change Passcode</button>
@@ -333,7 +335,6 @@
                 document.getElementById("confirm-passcode").value = "";
                 document.getElementById("pass-msg").textContent = "";
 
-                // Default to prices tab when opening
                 switchAdminTab('prices');
                 document.getElementById("edit-modal").classList.remove("hidden");
             } else {
