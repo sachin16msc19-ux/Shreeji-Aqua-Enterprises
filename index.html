@@ -108,12 +108,12 @@
 
     <!-- TOP BAR -->
     <div class="top-bar">
-        <span>📍 Serving Sarsawa & Nearby Areas | 📱 Helpline: 9034156087</span>
+        <span>📍 Serving Sarsawa & Nearby Areas | 📱 Helpline: 9389745724</span>
         <button class="lang-btn" onclick="toggleLanguage()" id="lang-btn">Translate to हिन्दी</button>
     </div>
 
     <!-- FLOATING WHATSAPP BUTTON -->
-    <a href="https://wa.me/919034156087?text=Hello%20Shreeji%20Aqua,%20I%20want%20to%20order%20TruAqua%20water" target="_blank" class="floating-wa-btn">
+    <a href="https://wa.me/919389745724?text=Hello%20Shreeji%20Aqua,%20I%20want%20to%20order%20TruAqua%20water" target="_blank" class="floating-wa-btn">
         💬 Order on WhatsApp
     </a>
 
@@ -130,9 +130,7 @@
                 <a href="#products">Rates</a>
                 <a href="#event-calc">Event Calc</a>
                 <span class="btn-pay-head" onclick="openPaymentModal(0, 'Shreeji Aqua Direct Payment')">💳 Pay Online</span>
-                <a href="https://wa.me/919034156087?text=Hello%20Shreeji%20Aqua,%20I%20want%20to%20order%20TruAqua%20water" target="_blank" class="btn-wa-head">💬 WhatsApp</a>
-                <a href="tel:9034156087" class="btn-call">📞 9034156087</a>
-                <a href="tel:9720868856" class="btn-call">📞 9720868856</a>
+                <a href="https://wa.me/919389745724?text=Hello%20Shreeji%20Aqua,%20I%20want%20to%20order%20TruAqua%20water" target="_blank" class="btn-wa-head">💬 WhatsApp</a>
                 <a href="tel:9389745724" class="btn-call">📞 9389745724</a>
             </nav>
         </div>
@@ -333,8 +331,6 @@
         <p style="margin-top: 5px;">Brand: <b>TruAqua 💧</b> | Location: Main Road, Sarsawa, UP</p>
         <p style="margin-top: 10px; font-size: 1rem;">
             📞 Helpline: 
-            <a href="https://wa.me/919034156087" target="_blank" class="phone-link">9034156087</a> | 
-            <a href="https://wa.me/919720868856" target="_blank" class="phone-link">9720868856</a> | 
             <a href="https://wa.me/919389745724" target="_blank" class="phone-link">9389745724</a>
         </p>
         <br>
@@ -356,7 +352,7 @@
             <div class="qr-box">
                 <img id="upi-qr-image" src="" alt="UPI Payment QR Code">
                 <br>
-                <span class="upi-badge" id="upi-id-display">UPI ID: 9034156087@paytm</span>
+                <span class="upi-badge" id="upi-id-display">UPI ID: sachin16msc19@ybl</span>
                 <p style="font-size: 0.75rem; color: #64748B; margin-top: 0.4rem;">Scan using GPay, PhonePe, Paytm, BHIM</p>
             </div>
 
@@ -420,8 +416,9 @@
     <!-- JAVASCRIPT LOGIC -->
     <script>
         const MASTER_PASSCODES = ["9720", "5555", "1234", "0000"];
-        const UPI_ID = "9034156087@paytm";
+        const UPI_ID = "sachin16msc19@ybl";
         const BUSINESS_NAME = "Shreeji Aqua Enterprises";
+        const PHONE_NO = "9389745724";
 
         const defaultPrices = { camperRefill: "₹25", camperDeposit: "₹200", box1L: "₹120", box500mL: "₹140", box250mL: "₹130", homeFilter: "₹4,500" };
 
@@ -472,7 +469,7 @@
             const amount = document.getElementById("pay-amount-input").value;
             const item = document.getElementById("pay-item-desc").textContent;
             const msg = `Hello Shreeji Aqua, I have completed the online payment of ₹${amount} via UPI (${item}). Please confirm my order!`;
-            window.open(`https://wa.me/919034156087?text=${encodeURIComponent(msg)}`, '_blank');
+            window.open(`https://wa.me/91${PHONE_NO}?text=${encodeURIComponent(msg)}`, '_blank');
         }
 
         function triggerDirectOrderPayment() {
@@ -494,7 +491,7 @@
             const address = document.getElementById("order-address").value;
 
             const msg = `Hello Shreeji Aqua, I want to order:\n- Product: ${product}\n- Quantity: ${qty}\n- Payment Mode: ${paymode}\n- Address: ${address}`;
-            const url = `https://wa.me/919034156087?text=${encodeURIComponent(msg)}`;
+            const url = `https://wa.me/91${PHONE_NO}?text=${encodeURIComponent(msg)}`;
             
             if (paymode.includes("Online")) {
                 triggerDirectOrderPayment();
@@ -556,7 +553,7 @@
         function orderSubscription() {
             const plan = document.getElementById("sub-plan").value;
             const msg = `Hello Shreeji Aqua, I want to subscribe to the ${plan} Campers/Month Pass for my home/office in Sarsawa.`;
-            const url = `https://wa.me/919034156087?text=${encodeURIComponent(msg)}`;
+            const url = `https://wa.me/91${PHONE_NO}?text=${encodeURIComponent(msg)}`;
             window.open(url, "_blank");
         }
 
